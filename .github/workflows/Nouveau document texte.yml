@@ -1,6 +1,7 @@
 name: build test
 on: 
-  push:
+ ## push:
+  workflow_dispatch:
 
 jobs:
   hello_world_job:

@@ -1,1 +1,1 @@
-{"extends": ["config:recommended"], "repositories": ["MelkiBenjamin/Cli"], "github-actions": {"pinDigests": true}}
+{"extends": ["config:recommended"], "repositories": ["MelkiBenjamin/GitHub-Actions-Test"], "github-actions": {"pinDigests": true}}

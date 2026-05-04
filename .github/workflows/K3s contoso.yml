@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: actions/checkout@v4
-      - uses: dorny/paths-filter@v3.0.2
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
         id: changes 
         with: 
           filters: | 
@@ -26,8 +26,8 @@ jobs:
   product-service:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.7
-      - uses: dorny/paths-filter@v3.0.2
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+      - uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
         id: changes 
         with: 
           filters: | 
@@ -63,7 +63,7 @@ jobs:
           (Get-Content .\k3s.yaml) -replace '127.0.0.1', "$IP" | Set-Content .\k3s.yaml | Out-Null
 
       - name: artifact k3s.yaml
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: k3s.yaml
           path: ./k3s.yaml
@@ -94,7 +94,7 @@ jobs:
         run : ls
 
       - name: artefact k3s.yaml
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e # v4.1.7
         with:
           name: k3s.yaml
 

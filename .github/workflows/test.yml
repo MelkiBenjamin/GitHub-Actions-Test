@@ -14,7 +14,7 @@ jobs:
     # Ici on déclare des actions à effectuer sur notre vm server    
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
     
     - name: donne la date pour test
       run: date
@@ -29,7 +29,7 @@ jobs:
     #  run: ansible-playbook /home/ben/Bureau/ansible/playbook/recette.yml -v
 
     - name: install python3
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
       with:
         python-version: '3.12' 
 
@@ -46,10 +46,10 @@ jobs:
     runs-on: self-hosted
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
     - name: install python3
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
       with:
         python-version: '3.12' 
 

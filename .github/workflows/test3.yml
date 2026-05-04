@@ -9,7 +9,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: install k3s
-        uses: jupyterhub/action-k3s-helm@v4.0.1          
+        uses: jupyterhub/action-k3s-helm@6389a7f2a11343ea6b469628c6e7b3afa961db24 # v4.0.1          
 
       - name: ls
         run: ls -alh /home
@@ -62,7 +62,7 @@ jobs:
       permissions:
         contents: read
       steps:
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: main
           sparse-checkout: |
@@ -103,7 +103,7 @@ jobs:
           sed -i "s/${{ env.tagcompose_cadvisor }}/gcr.io/cadvisor/cadvisor:${{ env.latestTag_cadvisor }}/g" $path3_destination
 
       - name: install apli monitoring prometheus grafana
-        uses: hoverkraft-tech/compose-action@v2.1.0
+        uses: hoverkraft-tech/compose-action@9575d402e7402331b6ac509df860c4da3ab47fc2 # v2.1.0
         with:
           compose-file: ./compose/docker-compose-monitoring.yml
           up-flags: -d
@@ -295,7 +295,7 @@ jobs:
           run: sleep 180
 
         - name: executing remote ssh commands using password
-          uses: appleboy/ssh-action@v1.2.0
+          uses: appleboy/ssh-action@7eaf76671a0d7eec5d98ee897acda4f968735a17 # v1.2.0
           with:
             host: ${{ secrets.IPTUNNELPUB }}
             username: user
@@ -406,7 +406,7 @@ jobs:
 
 
         - name: test action
-          uses: codetalkio/expose-tunnel@v1.5.0
+          uses: codetalkio/expose-tunnel@99fba2779ea2ca8cdbd6777aebb2b6352413fb78 # v1.5.0
           id: expose-tunnel
           with:
            service: bore.selfhosted
